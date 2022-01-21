@@ -25,6 +25,7 @@ body{
     align-items: center;
     height: 100vh;
     width: 100vw;
+    max-width: 100%;
 }
 
 .card{
@@ -71,6 +72,7 @@ body{
     border-radius: 14px;
     background-color: rgba(0, 255, 255,0.5);
     opacity: 0;
+    transition: opacity 1s;
 }
 
 .overlay-image{
@@ -99,6 +101,7 @@ body{
     font-weight: 600;
     color: var(--white);
     font-size: 18px;
+    transition: color 1s;
 }
 
 .desc{
@@ -167,6 +170,7 @@ body{
 
 .creator{
     color: var(--white);
+    transition: color 1s;
 }
 
 .avatar{
@@ -177,7 +181,18 @@ body{
     border-radius: 30px;
 }
 
+@media screen and (max-width : 370px) {
+    
+    .card,.overlay,.card-img{
+        width: 90%;
+        /* height: 90vh; */
+    }
 
+    .card-img{
+        height: 250px;
+    }
 
-
-
+    .card{
+        height: 500px;
+    }
+}
